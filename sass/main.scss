@@ -1,0 +1,32 @@
+@import "abstracts/functions";
+@import "abstracts/mixin";
+@import "abstracts/varriables";
+
+@import "base/animation";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/button";
+@import "components/corusel";
+@import "components/cover";
+@import "components/dropdown";
+
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+
+@import "pages/contact";
+@import "pages/home.scss";
+
+@import "themes/admin";
+@import "themes/theme";
+
+@import "venders/bootstrap";
+@import "venders/jquery";
+
+body{
+  background-color: aqua;
+}
