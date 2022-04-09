@@ -67,7 +67,7 @@ function addMusic(m) {
     musicPush.push(el.audio.primary);
   });
 
-  let music = `<audio controls>
+  let music = `<audio controls onended="myFunc(a)">
     <source src=.mp3, type="audio/ogg">
     <source src=${musicPush}.mp3, type="audio/mpeg">
   </audio>`;
