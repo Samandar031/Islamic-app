@@ -33,7 +33,7 @@ html {
   padding: 2rem;
   height: 92%; }
   .home_page .basic_content {
-    padding: 3rem;
+    padding: 3rem 3rem 7rem 3rem;
     overflow: scroll; }
     .home_page .basic_content::-webkit-scrollbar {
       width: 12px; }
@@ -43,7 +43,7 @@ html {
       opacity: 0.9; }
     .home_page .basic_content .content_description {
       font-size: 1.8rem;
-      line-height: 3rem;
+      line-height: 2rem;
       padding: 1rem 0;
       opacity: 0.8; }
     .home_page .basic_content .container_arabic {
@@ -51,8 +51,12 @@ html {
     .home_page .basic_content .content_title_text {
       font-size: 3rem;
       margin: 1rem auto;
-      text-align: center;
-      opacity: 0.8; }
+      opacity: 0.8;
+      text-align: center; }
+    .home_page .basic_content .content_title_text_one {
+      text-align: end; }
+    .home_page .basic_content .content_title_text_two {
+      text-align: start; }
     .home_page .basic_content .audio_box {
       background-color: var(--back);
       position: fixed;
