@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap");
 html {
   font-size: 62.5%; }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif; }
 
 :root {
   --kok: #42C0BE;
   --back: #F1F1F1;
-  --text: #A1A1A1;
+  --text: #b3aeae;
   --boldText:#2A2A2A; }
 
 .container_audio {
@@ -22,7 +24,7 @@ html {
     width: 100vw;
     height: 5rem;
     background-color: white;
-    box-shadow: 0 0 1rem gray; }
+    box-shadow: 0 0 0.5rem gray; }
 
 .home_page {
   width: 100%;
@@ -31,6 +33,51 @@ html {
   padding: 2rem;
   height: 92%; }
   .home_page .basic_content {
-    border: 2px solid red; }
+    padding: 3rem;
+    overflow: scroll; }
+    .home_page .basic_content::-webkit-scrollbar {
+      width: 12px; }
+    .home_page .basic_content .content_title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.9; }
+    .home_page .basic_content .content_description {
+      font-size: 1.8rem;
+      line-height: 3rem;
+      padding: 1rem 0;
+      opacity: 0.8; }
+    .home_page .basic_content .container_arabic {
+      font-size: 10rem; }
+    .home_page .basic_content .content_title_text {
+      font-size: 3rem;
+      margin: 1rem auto;
+      text-align: center;
+      opacity: 0.8; }
+    .home_page .basic_content .audio_box {
+      background-color: var(--back);
+      position: fixed;
+      bottom: 2.3rem;
+      left: 1.8rem;
+      width: 73%;
+      padding: 1rem; }
+      .home_page .basic_content .audio_box audio {
+        border: 2px solid var(--kok);
+        width: 100%;
+        padding: 1rem;
+        border-radius: 2rem; }
   .home_page .basic_menu {
-    border: 2px solid gold; }
+    padding: 2.5rem;
+    background-color: var(--kok);
+    color: white;
+    overflow: scroll; }
+    .home_page .basic_menu::-webkit-scrollbar {
+      width: 0px; }
+    .home_page .basic_menu .basic_menu_title {
+      font-size: 2rem;
+      text-align: center; }
+    .home_page .basic_menu .basic_menu_parts {
+      font-size: 1.8rem;
+      border-bottom: 1px solid white;
+      padding: 0.5rem; }
+      .home_page .basic_menu .basic_menu_parts span {
+        margin: 0 10px 0 0; }
