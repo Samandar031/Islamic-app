@@ -69,13 +69,25 @@ html {
     padding: 2.5rem;
     background-color: var(--kok);
     color: white;
-    overflow: scroll; }
+    overflow: scroll;
+    position: relative; }
     .home_page .basic_menu::-webkit-scrollbar {
       width: 0px; }
     .home_page .basic_menu .basic_menu_title {
       font-size: 2rem;
-      text-align: center; }
+      text-align: center;
+      position: fixed;
+      top: 7rem;
+      right: 2rem;
+      width: 32rem;
+      background-color: var(--kok);
+      height: 6rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .home_page .basic_menu .basic_menu_parts {
+      margin-top: 3rem;
       font-size: 1.8rem;
       border-bottom: 1px solid white;
       padding: 0.5rem; }

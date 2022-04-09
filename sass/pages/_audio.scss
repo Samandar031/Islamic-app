@@ -99,14 +99,30 @@ html{
     background-color: var(--kok);
     color:white;
     overflow: scroll;
+    position:relative;
+
     &::-webkit-scrollbar {
       width: 0px;
     }
+
     .basic_menu_title {
       font-size: 2rem;
       text-align: center;
+      position: fixed;
+      top: 7rem;
+      right: 2rem;
+      width: 32rem;
+      background-color: var(--kok);
+     
+      height: 6rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
     }
     .basic_menu_parts {
+      margin-top: 3rem;
       font-size: 1.8rem;
       border-bottom: 1px solid white;
       padding: 0.5rem;
