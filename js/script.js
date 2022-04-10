@@ -1,6 +1,7 @@
 let mundarija = document.querySelector(".basic_menu");
 let polniy = document.querySelector(".mini_content");
 let getCard = document.querySelector(".mini_content");
+let basic = document.querySelector(".basic_title");
 
 let ArrBox = [];
 
@@ -60,6 +61,10 @@ const renderFunc = function (bir, ikki, uch) {
         return val.data.name.transliteration.en == findEL;
       });
 
+      basic.innerHTML = "";
+      let title = `<div class="content_title">${filter.data.name.transliteration.en}</div>`;
+      basic.insertAdjacentHTML("afterbegin", title);
+
       for (let i = 0; i < ArrBox.length; i++) {
         let arabic = `<div class="content_description content_arabic">${
           filter.data.verses[i].text.arab
@@ -79,11 +84,19 @@ const renderFunc = function (bir, ikki, uch) {
       </audio>`;
 
         getCard.insertAdjacentHTML("beforeend", arabic);
+
+        console.log(filter.data.name.transliteration);
       }
 
       var x = 0;
       var music = document.getElementById("player");
-      music.onended = function () {};
+
+      $("#player").bind("ended", function () {
+        x = x + 1;
+        music.src = (x % 4) + "/ogg";
+        music.load();
+        music.play();
+      });
     });
   });
 };
