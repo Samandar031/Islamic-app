@@ -54,7 +54,6 @@ function getMusic(val) {
       surahAdd(resp.data.verses);
       addMusic(resp.data.verses);
       console.log(resp.data.verses);
-      // console.log(resp.data.verses);
     });
 }
 getMusic(1);
@@ -67,10 +66,10 @@ function addMusic(m) {
     musicPush.push(el.audio.primary);
   });
 
-  let music = `<audio controls onended="myFunc(a)">
-    <source src=.mp3, type="audio/ogg">
-    <source src=${musicPush}.mp3, type="audio/mpeg">
-  </audio>`;
-  musicAdd.insertAdjacentHTML("beforeend", music);
+  // let music = `<audio controls onended="myFunc(a)">
+  //   <source src=.mp3, type="audio/ogg">
+  //   <source src=${musicPush}.mp3, type="audio/mpeg">
+  // </audio>`;
+  // musicAdd.insertAdjacentHTML("beforeend", music);
 }
 console.log(musicPush);
