@@ -44,7 +44,7 @@ html{
 
   .basic_content {
     
-    padding: 3rem 3rem 7rem 3rem;
+    padding: 3rem ;
     overflow: scroll;
    
     
@@ -76,26 +76,21 @@ html{
     }
 
     .content_title_text_one {
-      text-align: end;
-    }
-
-    .content_title_text_two {
-      text-align: start;
-    }
-
-
-    .audio_box {
-      background-color:var(--back);
-      position: fixed;
-        bottom: 2.3rem;
-        left: 1.8rem;
-        width: 73%;
-      padding: 1rem;
+      
+      .content_uzbek {
+        text-align: start;
+       
+      }
+      .content_arabic {
+        text-align: end;
+      }
+   
+    
       audio {
         border: 2px solid var(--kok);
         width: 100%;
-        padding: 1rem;
-       
+        padding: 0.1rem;
+        margin: 1rem 0;
         border-radius: 2rem;
       }
     }

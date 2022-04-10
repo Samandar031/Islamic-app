@@ -1,75 +1,90 @@
 let mundarija = document.querySelector(".basic_menu");
+let polniy = document.querySelector(".mini_content");
+let getCard = document.querySelector(".mini_content");
 
-function getMun() {
-  fetch("https://api.quran.sutanlab.id/surah")
-    .then((res) => {
-      return res.json();
-    })
-    .then((resp) => {
-      html(resp.data);
-      // console.log(resp.data[0]);
-    });
-}
-getMun();
+let ArrBox = [];
 
-function html(a) {
-  a.forEach((el) => {
-    let htmlAdd = ` <div class="basic_menu_parts"><span>${el.number}.</span>${el.name.transliteration.en}</div>`;
+const fetchFunc = async function () {
+  let a = 1;
+  let b = 114;
 
-    mundarija.insertAdjacentHTML("beforeend", htmlAdd);
-  });
-}
+  let nomi = await fetch(`https://api.quran.sutanlab.id/surah`);
+  let nomiJson = await nomi.json();
 
-let getArabic = document.querySelector(".content_title_text_one");
-let getIngliz = document.querySelector(".content_title_text_two");
+  let uzb = await fetch(
+    `https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/uzb-alaaudeenmansou.json`
+  );
+  let uzbJson = await uzb.json();
 
-let arr = [];
+  for (let i = a; i <= b; i++) {
+    let b = await fetch(`https://api.quran.sutanlab.id/surah/${i}`);
+    let bJson = await b.json();
 
-function getEnglish(key) {
-  fetch(`https://api.quran.sutanlab.id/surah/${key}`)
-    .then((res) => res.json())
-    .then((resp) => {
-      surahAdd(resp.data.verses);
-      console.log(resp.data.verses);
-    });
-}
+    ArrBox.push(bJson);
+    renderFunc(bJson.data, uzbJson.quran, nomiJson.data);
+  }
+};
 
-function surahAdd(a) {
-  a.forEach((el) => {
-    let arabic = `<div class="content_description content_uzbek">${el.text.arab}</div>`;
-    let englishL = ` <div class="content_description content_arabic">${el.text.transliteration.en}
-    </div>`;
+fetchFunc();
 
-    getArabic.insertAdjacentHTML("beforeend", arabic);
-    getIngliz.insertAdjacentHTML("beforeend", englishL);
-  });
-}
-
-getEnglish(1);
-
-function getMusic(val) {
-  fetch(`https://api.quran.sutanlab.id/surah/${val}`)
-    .then((res) => res.json())
-    .then((resp) => {
-      surahAdd(resp.data.verses);
-      addMusic(resp.data.verses);
-      console.log(resp.data.verses);
-    });
-}
-getMusic(1);
-
-let musicPush = [];
-
-let musicAdd = document.querySelector(".audio_box");
-function addMusic(m) {
-  m.forEach((el) => {
-    musicPush.push(el.audio.primary);
+// mundarija qismini chiqarish
+const renderFunc = function (bir, ikki, uch) {
+  let uzbArr = ikki.filter((val) => {
+    return val.chapter == bir.number;
   });
 
-  // let music = `<audio controls onended="myFunc(a)">
-  //   <source src=.mp3, type="audio/ogg">
-  //   <source src=${musicPush}.mp3, type="audio/mpeg">
-  // </audio>`;
-  // musicAdd.insertAdjacentHTML("beforeend", music);
-}
-console.log(musicPush);
+  let findEL;
+
+  uch.forEach((val) => {
+    let span = document.createElement("span");
+    span.textContent = val.number;
+
+    let div = document.createElement("div");
+    div.classList.add("basic_menu_parts");
+    div.textContent = `${val.name.transliteration.en}`;
+    div.id = `${val.name.transliteration.en}`;
+
+    div.prepend(span);
+
+    // let htmlAdd = ` <div class="basic_menu_parts">
+    // <span>${val.number}.</span>${val.name.transliteration.en}</div>`;
+
+    mundarija.append(div);
+
+    div.addEventListener("click", function () {
+      polniy.innerHTML = "";
+
+      findEL = div.id;
+
+      let filter = ArrBox.find((val) => {
+        return val.data.name.transliteration.en == findEL;
+      });
+
+      for (let i = 0; i < ArrBox.length; i++) {
+        let arabic = `<div class="content_description content_arabic">${
+          filter.data.verses[i].text.arab
+        }</div>
+        <div class="content_description content_uzbek">${
+          uzbArr[i] ? uzbArr[i].text : ""
+        }
+        </div>
+        
+        <audio id="player"  controls class="audio">
+        <source src="${
+          filter.data.verses[i].audio.secondary[0]
+        }" type="audio/ogg">
+        <source src="${
+          filter.data.verses[i].audio.secondary[0]
+        }" type="audio/mpeg">
+      </audio>`;
+
+        getCard.insertAdjacentHTML("beforeend", arabic);
+      }
+
+      var x = 0;
+      var music = document.getElementById("player");
+      music.onended = function () {};
+    });
+  });
+};
+// //////////////////////////////////
