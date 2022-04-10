@@ -242,3 +242,75 @@ body {
         background-color: var(--kok);
         width: 5.8rem;
         height: 5rem; }
+
+.about {
+  width: 100%;
+  height: 110vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  padding-top: 5rem; }
+  .about .about_one {
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem; }
+    .about .about_one .about_title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.6rem;
+      height: 5rem;
+      margin-bottom: 5rem;
+      font-weight: 550; }
+      .about .about_one .about_title span {
+        width: 1.2rem;
+        height: 1.2rem;
+        transform: rotate(45deg);
+        background-color: var(--kok); }
+      .about .about_one .about_title hr {
+        width: 6rem;
+        margin: 1rem;
+        border: 1px dashed var(--kok); }
+      .about .about_one .about_title div {
+        margin: 1rem;
+        color: var(--kok); }
+    .about .about_one .about_note {
+      margin: 3rem 0;
+      font-weight: 550;
+      font-size: 2.2rem; }
+      .about .about_one .about_note div {
+        display: inline-block;
+        margin: 0 1rem 0 0;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.3rem;
+        background-color: var(--kok);
+        transform: rotate(45deg); }
+    .about .about_one .about_items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: start; }
+      .about .about_one .about_items .about_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 5rem; }
+        .about .about_one .about_items .about_item div {
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          background-color: var(--kok);
+          transform: rotate(45deg);
+          margin: 1rem;
+          border-radius: 0.3rem; }
+  .about .about_two {
+    padding: 4rem 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .about .about_two img {
+      width: 55rem;
+      height: 50rem; }
