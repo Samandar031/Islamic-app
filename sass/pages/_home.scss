@@ -1,0 +1,107 @@
+:root{
+  --kok: #42C0BE;
+  --back: #F1F1F1;
+  --text: #b3aeae;
+  --boldText:#2A2A2A;
+  --black: black;
+  --oq:white;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--back);
+}
+
+.container_app{
+  max-width: 136.6rem;
+  margin: 0 auto;
+}
+
+.basic_home{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 89vh;
+  width: 100%;
+  line-height: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  span{
+    color: var(--kok);
+    margin: 0.3rem;
+  }
+  .home_text{
+    font-size: 1.6rem;
+  }
+}
+
+
+.categories{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .categorie_title_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    height: 5rem;
+    margin-bottom: 5rem;
+    font-weight: 550;
+    span{
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: rotate(45deg);
+      background-color: var(--kok);
+    }
+    hr{
+      width: 8rem;
+      margin: 1rem;
+      border: 1px dashed var(--kok);
+    }
+    div{
+      margin: 1rem;
+      color: var(--kok);
+    }
+  }
+  .categorie_boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem auto;
+    gap: 2rem;
+    .categorie_box{
+      background-color: white;
+      box-shadow: 0 0 0.5rem rgba(204, 185, 185, 0.527);
+      width: 25rem;
+      height: 22rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.5rem;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+      span{
+        position: absolute;
+        left: -3rem;
+        bottom: -3rem;
+        transform: rotate(45deg);
+        background-color: var(--kok);
+        width: 5.8rem;
+        height: 5rem;
+      }
+    }
+  }
+}

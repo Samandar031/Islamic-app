@@ -1,4 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap");
+:root {
+  --kok: #42C0BE;
+  --back: #F1F1F1;
+  --text: #b3aeae;
+  --boldText:#1d1515;
+  --black: black; }
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+.navigation_menu {
+  width: 100%;
+  height: 5.5rem;
+  background-color: white;
+  box-shadow: 0 0 0.5rem gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 2rem; }
+  .navigation_menu .nav_left {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .navigation_menu .nav_left span {
+      color: var(--kok); }
+  .navigation_menu .nav_right {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem; }
+
+.navigation_popups {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  transform: translateX(100vw);
+  display: none; }
+  .navigation_popups .navigation_popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 99vh;
+    background-color: var(--kok);
+    color: white;
+    font-size: 2rem;
+    text-align: center; }
+    .navigation_popups .navigation_popup .navigation_items {
+      padding-top: 8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem; }
+      .navigation_popups .navigation_popup .navigation_items a {
+        display: inline-block;
+        color: white; }
+
 html {
   font-size: 62.5%; }
 
@@ -20,11 +83,6 @@ html {
   font-size: 1rem;
   height: 100vh;
   margin: 0 auto; }
-  .container_audio .navigation_items {
-    width: 100vw;
-    height: 5rem;
-    background-color: white;
-    box-shadow: 0 0 0.5rem gray; }
 
 .home_page {
   width: 100%;
@@ -91,3 +149,96 @@ html {
       padding: 0.5rem; }
       .home_page .basic_menu .basic_menu_parts span {
         margin: 0 10px 0 0; }
+
+:root {
+  --kok: #42C0BE;
+  --back: #F1F1F1;
+  --text: #b3aeae;
+  --boldText:#2A2A2A;
+  --black: black;
+  --oq:white; }
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: var(--back); }
+
+.container_app {
+  max-width: 136.6rem;
+  margin: 0 auto; }
+
+.basic_home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 89vh;
+  width: 100%;
+  line-height: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem; }
+  .basic_home span {
+    color: var(--kok);
+    margin: 0.3rem; }
+  .basic_home .home_text {
+    font-size: 1.6rem; }
+
+.categories {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .categories .categorie_title_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    height: 5rem;
+    margin-bottom: 5rem;
+    font-weight: 550; }
+    .categories .categorie_title_box span {
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: rotate(45deg);
+      background-color: var(--kok); }
+    .categories .categorie_title_box hr {
+      width: 8rem;
+      margin: 1rem;
+      border: 1px dashed var(--kok); }
+    .categories .categorie_title_box div {
+      margin: 1rem;
+      color: var(--kok); }
+  .categories .categorie_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 1rem auto;
+    gap: 2rem; }
+    .categories .categorie_boxes .categorie_box {
+      background-color: white;
+      box-shadow: 0 0 0.5rem rgba(204, 185, 185, 0.527);
+      width: 25rem;
+      height: 22rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.5rem;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden; }
+      .categories .categorie_boxes .categorie_box span {
+        position: absolute;
+        left: -3rem;
+        bottom: -3rem;
+        transform: rotate(45deg);
+        background-color: var(--kok);
+        width: 5.8rem;
+        height: 5rem; }
