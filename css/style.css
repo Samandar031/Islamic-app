@@ -172,6 +172,7 @@ body {
   margin: 0 auto; }
 
 .basic_home {
+  color: var(--oq);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -184,7 +185,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.3rem; }
   .basic_home span {
-    color: var(--kok);
+    color: #94dddcf8;
     margin: 0.3rem; }
   .basic_home .home_text {
     font-size: 1.6rem; }
@@ -314,3 +315,6 @@ body {
     .about .about_two img {
       width: 55rem;
       height: 50rem; }
+
+.video {
+  margin: 5rem 1rem; }

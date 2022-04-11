@@ -23,6 +23,7 @@ body {
 }
 
 .basic_home{
+  color: var(--oq);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -35,7 +36,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.3rem;
   span{
-    color: var(--kok);
+    color: #94dddcf8;
     margin: 0.3rem;
   }
   .home_text{
@@ -200,5 +201,8 @@ body {
       height: 50rem;
     }
   }
- 
+}
+
+.video{
+  margin: 5rem 1rem;
 }
