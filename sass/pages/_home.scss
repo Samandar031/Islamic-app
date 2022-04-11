@@ -103,6 +103,11 @@ body {
         width: 5.8rem;
         height: 5rem;
       }
+      i{
+        font-size: 3rem;
+        opacity: 0.6;
+        margin: 1rem;
+      }
     }
   }
 }
@@ -205,4 +210,106 @@ body {
 
 .video{
   margin: 5rem 1rem;
+}
+
+.blogs{
+  width: 100%;
+  height: 120vh;
+ 
+  padding: 1rem;
+  .blog_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    height: 5rem;
+    margin: 10rem 0;
+    margin-bottom: 5rem;
+    font-weight: 550;
+    span{
+      width: 1.2rem;
+      height: 1.2rem;
+      transform: rotate(45deg);
+      background-color: var(--kok);
+    }
+    hr{
+      width: 6rem;
+      margin: 1rem;
+      border: 1px dashed var(--kok);
+    }
+    div{
+      margin: 1rem;
+      color: var(--kok);
+    }
+  }
+
+  .blog_boxes{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+
+    .blog_box{
+      border: 1px solid var(--text);
+   
+      width: 30rem;
+      height: 45rem;
+      margin: 1rem auto;
+      position: relative;
+      .blog_data{
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: var(--kok);
+        width: 6rem;
+        height: 8rem;
+        color: var(--oq);
+        border: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        span{
+          font-size: 2.5rem;
+        }
+      }
+      img{
+        width: 100%;
+        height: 50%;
+        
+      }
+
+      .blog_statistic{
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;
+        padding: 1rem;
+        font-size: 1.2rem;
+        i{
+          margin: 0.5rem;
+        }
+      }
+
+      hr{
+        width: 3rem;
+        height: 0.2rem;
+        margin: 0 1rem;
+        background-color: var(--boldText);
+        border: none;
+      }
+
+      .blog_card_title{
+        font-size: 2rem;
+        margin: 1rem;
+      }
+
+      .blog_description{
+        font-size: 1.2rem;
+        color: var(--text);
+        line-height: 2rem;
+        margin: 1rem;
+      }
+    }
+  }
 }
