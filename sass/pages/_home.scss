@@ -313,3 +313,19 @@ body {
     }
   }
 }
+
+.succes{
+  width: 100%;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.2rem;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(66,192,190,1) 0%, rgba(45,152,150,1) 69%, rgba(40,125,124,1) 100%);
+  .suc_next{
+    text-align: center;
+  }
+}
