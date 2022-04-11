@@ -470,6 +470,7 @@ body {
   justify-content: center;
   align-items: center; }
   .upcomming_content .upcomming_three {
+    box-shadow: 0 0 0.5rem var(--kok);
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -506,3 +507,46 @@ body {
       .upcomming_content .upcomming_three .three_content .three_description {
         font-size: 1.5rem;
         opacity: 0.7; }
+
+.partners {
+  width: 100%;
+  height: 50vh; }
+  .partners .partner_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    height: 5rem;
+    font-weight: 550; }
+    .partners .partner_title span {
+      width: 1.2rem;
+      height: 1.2rem;
+      transform: rotate(45deg);
+      background-color: var(--kok); }
+    .partners .partner_title hr {
+      width: 6rem;
+      margin: 1rem;
+      border: 1px dashed var(--kok); }
+    .partners .partner_title div {
+      margin: 1rem;
+      color: var(--kok); }
+  .partners .partner_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 2rem; }
+    .partners .partner_boxes .partner_box {
+      margin: 1rem auto;
+      background-color: var(--oq);
+      box-shadow: 0 0 1rem rgba(128, 128, 128, 0.219);
+      width: 20rem;
+      height: 22rem;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+.contacts {
+  width: 100%;
+  height: 100vh;
+  border: 2px solid red; }
